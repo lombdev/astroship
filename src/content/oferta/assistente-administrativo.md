@@ -30,4 +30,4 @@ publishDate: "2023-07-01 15:39"
 - Localização: São Martinho, Funchal.
 
 Candidaturas até 31 de julho de 2023.
-Envio de CV para figurequacao@hotmail.comsharpen your mind and make this happen!
+Envio de CV para figurequacao@hotmail.com

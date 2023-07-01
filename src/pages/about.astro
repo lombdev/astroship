@@ -4,11 +4,6 @@ import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="Quem Somos">
@@ -29,8 +24,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         O rigor e responsabilidade caracterizam o nosso trabalho, desde a seleção cuidadosa das matérias-primas até à entrega dos projetos.
         Procuramos oferecer aos nossos clientes soluções excepcionais nos mais diversos setores, incluindo habitação, restauração, hotelaria e serviços.
       </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Após um período de mudança de instalações, contamos regressar à atividade ainda em 2023 no Funchal.</p>
     </div>
   </Container>
 </Layout>
