@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter oferta entries with 'draft: false' & date before current date
+const ofertaEntries = await getCollection("oferta", ({ data }) => {
+  return !data.draft;
+});
+
+// Sort content entries by publication date
+ofertaEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Recrutamento">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ofertas</Fragment>
+      <Fragment slot="desc">
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          ofertaEntries.map((ofertaEntry, index) => (
+            <li>
+              <a href={`/oferta/${ofertaEntry.slug}`}>
+                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                  <Picture
+                    src={ofertaEntry.data.image.src}
+                    alt={ofertaEntry.data.image.alt}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    widths={[200, 400, 800]}
+                    aspectRatio="16:9"
+                    background="#ffffff"
+                    fit="cover"
+                    position="center"
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="w-full rounded-md"
+                  />
+                  <div>
+                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {ofertaEntry.data.title}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={ofertaEntry.data.publishDate.toISOString()}>
+                        {ofertaEntry.data.publishDate.toDateString()}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
