@@ -3,6 +3,8 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "@astrojs/image/components";
+import pedraformosaLogo from "assets/logos/pedraformosarenderlogo.png";
 
 const menuitems = [
   {
@@ -29,10 +31,13 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Pedra</span><span
-            class="text-slate-500">
-            Formosa</span
           >
+          <Picture
+            src={pedraformosaLogo}
+            alt="Pedra Formosa logo"
+            widths={[200, 400, 600]}
+            sizes="(max-width: 800px) 30vw, 140px"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
