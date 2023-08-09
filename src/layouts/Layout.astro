@@ -11,11 +11,14 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/pedraformosapreto.jpg",
   Astro.site
 ).toString();
 
 const { title } = Astro.props;
+const description = `Com mais de cinco anos de experiência em transformação de pedras
+ naturais e compósitas, a empresa Pedra Formosa distingue-se pelo rigor e profissionalismo
+  que dedica a um dos projetos.`;
 
 const makeTitle = title
   ? title
@@ -33,23 +36,21 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Somos uma empresa especializada em transformação de pedra."
+      description={description}
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Pedra Formosa`,
+          title: `${makeTitle}`,
           image: resolvedImageWithDomain,
         },
         image: {
           alt: "Astroship Homepage Screenshot",
         },
+        optional: {
+            locale: 'pt_PT'
+        }
       }}
     />
   </head>
