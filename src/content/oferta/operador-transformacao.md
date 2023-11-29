@@ -1,9 +1,11 @@
 ---
 draft: false
-title: "Operador de transformação de rochas ornamentais (M/F) - Funchal"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+title: "Operador de transformação de rochas ornamentais"
+snippet: "Candidaturas até 15 de fevereiro de 2024."
 image: { src: "/recrutamento.png", alt: "Homem a anotar" }
-publishDate: "2023-07-02 15:39"
+publishDate: "2023-11-29 15:40"
+category: "Oferta"
+author: "Pedra Formosa"
 ---
 
 ## Perfil
@@ -28,7 +30,6 @@ publishDate: "2023-07-02 15:39"
 
 - Emprego com possibilidades de crescimento interno nos quadros da empresa;
 - Remuneração de acordo com a experiência.
-- Localização: São Martinho, Funchal.
 
-Candidaturas até 31 de julho de 2023.
+Candidaturas até 15 de fevereiro de 2024.
 Envio de CV para geral@pedraformosa.pt

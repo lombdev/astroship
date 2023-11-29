@@ -3,6 +3,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource/inter/variable.css";
+import "../global.css";
 
 export interface Props {
   title: string;
@@ -16,9 +17,9 @@ const resolvedImageWithDomain = new URL(
 ).toString();
 
 const { title } = Astro.props;
-const description = `Com mais de cinco anos de experiência em transformação de pedras
- naturais e compósitas, a empresa Pedra Formosa distingue-se pelo rigor e profissionalismo
-  que dedica a um dos projetos.`;
+const description = `Com sede no Funchal, a empresa Pedra Formosa distingue-se pelo
+ rigor e profissionalismo que dedica a cada projeto. Fundada em 2014, conta já com vasta 
+ experiência na transformação de pedras naturais e compósitas.`;
 
 const makeTitle = title
   ? title

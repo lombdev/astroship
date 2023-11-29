@@ -44,11 +44,18 @@ ofertaEntries.sort(function (a, b) {
                     class="w-full rounded-md"
                   />
                   <div>
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {ofertaEntry.data.category}
+                    </span>
+
                     <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
                       {ofertaEntry.data.title}
                     </h2>
 
                     <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">
+                        {ofertaEntry.data.author}
+                      </span>
                       <span class="text-gray-400">• </span>
                       <time
                         class="text-gray-400"

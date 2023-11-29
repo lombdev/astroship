@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https:/www.pedraformosa.pt",
+  site: "https://www.pedraformosa.pt/",
   integrations: [
     tailwind(),
     image({
