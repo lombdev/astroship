@@ -31,5 +31,4 @@ author: "Pedra Formosa"
 - Emprego com possibilidades de crescimento interno nos quadros da empresa;
 - Remuneração de acordo com a experiência.
 
-Candidaturas até 15 de fevereiro de 2024.
 Envio de CV para geral@pedraformosa.pt

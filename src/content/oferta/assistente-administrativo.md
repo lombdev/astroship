@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Assistente Administrativo"
 snippet: "Candidaturas até 15 de fevereiro de 2024."
 image: { src: "/recrutamento.png", alt: "Homem a anotar" }
