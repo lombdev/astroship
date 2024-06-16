@@ -1,40 +1,50 @@
 ---
-import { Icon } from "astro-icon";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Button from "@components/ui/button.astro";
-import Contactform from "@components/contactform.astro";
+import { Icon } from 'astro-icon';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+import Button from '@components/ui/button.astro';
+import Contactform from '@components/contactform.astro';
 ---
 
-<Layout title="Contact">
+<Layout title='Contactos'>
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contactos</Fragment>
-      <Fragment slot="desc"></Fragment>
+      <Fragment slot='title'>Contactos</Fragment>
+      <Fragment slot='desc'></Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-16">
+    <div class='grid md:grid-cols-1 gap-10 mx-auto max-w-4xl mt-16'>
       <div>
-        <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Ficou com dúvidas? Estamos aqui para ajudar. Contacte-nos através dos números disponibilizados.
+        <p class='text-lg leading-relaxed text-slate-500 mt-3'>
+          Ficou com dúvidas? Estamos aqui para ajudar. Contacte-nos através dos
+          números disponibilizados.
         </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <a href="https://maps.app.goo.gl/wjoiwgnUi84Lomzq5" target="_blank">
+        <div class='mt-5'>
+          <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:map-marker' />
+            <a href='https://maps.app.goo.gl/wjoiwgnUi84Lomzq5' target='_blank'>
               <span>Caminho do Poço Barral 51, 9000-155 Funchal</span>
             </a>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:geral@pedraformosa.pt">geral@pedraformosa.pt</a>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+351 964489208">+351 964 489 208</a>
+          </div><div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:envelope' /><a
+              href='mailto:geral@pedraformosa.pt'>geral@pedraformosa.pt</a
+            >
           </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+351 291784261">+351 291 784 261</a>
+          <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='whatsapp' /><a
+              href='https://wa.me/+351964489208'>WhatsApp (+351 964 489 208)</a
+            >
+          </div>
+          <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:phone' /><a
+              href='tel:+351 964489208'>+351 964 489 208</a
+            >
+          </div>
+          <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+            <Icon class='text-gray-400 w-4 h-4' name='uil:phone' /><a
+              href='tel:+351 291784261'>+351 291 784 261</a
+            >
           </div>
         </div>
       </div>
