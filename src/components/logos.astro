@@ -1,7 +1,8 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon";
 import silestonelogo from "assets/logos/silestonelogo.jpg";
+import biesselogo from "assets/logos/biesselogo.jpg";
+import afimadeiralogo from "assets/logos/afimadeiralogo.jpg";
 import { Picture } from "@astrojs/image/components";
 ---
 
@@ -11,6 +12,18 @@ import { Picture } from "@astrojs/image/components";
     <Picture
       src={silestonelogo}
       alt="Silestone logo"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 60vw, 180px"
+    />
+    <Picture
+      src={afimadeiralogo}
+      alt="Afimadeira logo"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 60vw, 180px"
+    />
+    <Picture
+      src={biesselogo}
+      alt="Biesse logo"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 60vw, 180px"
     />
