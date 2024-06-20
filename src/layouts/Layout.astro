@@ -1,9 +1,10 @@
 ---
-import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource/inter/variable.css";
-import "../global.css";
+import { SEO } from 'astro-seo';
+import Footer from '@components/footer.astro';
+import Navbar from '@components/navbar/navbar.astro';
+import '@fontsource/inter/variable.css';
+import '../global.css';
+import { Icon } from 'astro-icon';
 
 export interface Props {
   title: string;
@@ -12,7 +13,7 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/pedraformosapreto.jpg",
+  '/pedraformosapreto.jpg',
   Astro.site
 ).toString();
 
@@ -25,16 +26,16 @@ Solicite o seu orçamento gratuito hoje mesmo!`;
 
 const makeTitle = title
   ? title
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  : 'Astroship - Starter Template for Astro with Tailwind CSS';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
@@ -44,16 +45,16 @@ const makeTitle = title
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
+          type: 'website',
           title: `${makeTitle}`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Pedra Formosa logo",
+          alt: 'Pedra Formosa logo',
         },
         optional: {
-            locale: 'pt_PT'
-        }
+          locale: 'pt_PT',
+        },
       }}
     />
   </head>
@@ -68,5 +69,8 @@ const makeTitle = title
         content-visibility: auto;
       }
     </style>
+    <a href='https://wa.me/+351964489208' class='whatsapp-icon-float'>
+      <Icon name='whatsapp-96' />
+    </a>
   </body>
 </html>
