@@ -4,6 +4,7 @@ import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
 
 // Filter portfolio entries with 'draft: false' & date before current date
 const publishedPortfolio = await getCollection("portfolio", ({ data }) => {
@@ -23,7 +24,8 @@ const publishedPortfolio = await getCollection("portfolio", ({ data }) => {
         publishedPortfolio.map((portfolioEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
-              <Picture
+              <Link href={portfolioEntry.data.avatar.src} style="inverted">
+                <Picture
                 src={portfolioEntry.data.avatar.src}
                 alt={portfolioEntry.data.avatar.alt}
                 sizes="(max-width: 800px) 100vw, 400px"
@@ -33,7 +35,9 @@ const publishedPortfolio = await getCollection("portfolio", ({ data }) => {
                 fit="cover"
                 position="center"
                 class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
+              >
+              </Picture>
+              </Link>
             </div>
 
             <div class="mt-4 text-center">
